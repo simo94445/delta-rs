@@ -1,3 +1,18 @@
+This fork builds on my freeBSD machine. 
+
+pkg install rust
+sudo pkg install llvm15
+pkg install heimdal
+pkg install gmake
+export LIBCLANG_PATH=/usr/local/llvm15/lib
+export BINDGEN_EXTRA_CLANG_ARGS="-I/usr/local/include"
+export MAKE=gmake
+pip3 install maturin
+RUST_BACKTRACE=1 maturin develop --release --features no-jemalloc
+
+
+
+
 <p align="center">
   <a href="https://delta.io/">
     <img src="https://github.com/delta-io/delta-rs/blob/main/docs\delta-rust-no-whitespace.svg?raw=true" alt="delta-rs logo" height="200">
