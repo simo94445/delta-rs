@@ -1,5 +1,5 @@
 This fork builds on my freeBSD machine. 
-
+```sh
 pkg install rust
 sudo pkg install llvm15
 pkg install heimdal
@@ -9,7 +9,7 @@ export BINDGEN_EXTRA_CLANG_ARGS="-I/usr/local/include"
 export MAKE=gmake
 pip3 install maturin
 RUST_BACKTRACE=1 maturin develop --release --features no-jemalloc
-
+```
 
 
 
